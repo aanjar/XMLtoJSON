@@ -1,0 +1,12 @@
+textarea {
+    width:40%;
+    height:400px;
+    max-width:500px;
+    /* min-height: 500px; */
+}
+
+#btn {
+    margin: 10px 20px;
+    padding: 10px 20px;
+    background-color: grey;
+}

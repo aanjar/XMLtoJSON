@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML to JSON Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <textarea id="xml"></textarea>
+            <textarea id="json"></textarea>
+        </div>
+        <button id="btn"><b>CONVERT</b></button>
+    </div>
+    <script src="x2js.js"></script>
+    <script>
+        document.getElementById('btn').onclick = function() {
+            var xjs = new X2JS();
+            var json = xjs.xml_str2json(document.getElementById('xml').value);
+            document.getElementById('json').innerHTML = JSON.stringify(json, null, 2);
+        }
+    </script>
+</body>
+</html>
